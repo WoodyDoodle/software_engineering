@@ -22,7 +22,7 @@ def fib(n):
         count += 1
 
 
-for num in fib(400):
+for num in fib(200):
     print(num)
 ```
 ![image](https://github.com/WoodyDoodle/software_engineering/assets/123651515/92d303b9-b669-4531-a3a3-07f5fdfebaef)
