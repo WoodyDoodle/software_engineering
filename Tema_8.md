@@ -40,12 +40,12 @@ person2 = Person("Анна", 25, "жен")
 person2.show_info()
 person2.greet()
 
-person3 = Person("Женя", 20, " ")
+person3 = Person("Женя", 20, "муж")
 person3.show_info()
 person3.greet()
 ```
+![image](https://github.com/WoodyDoodle/software_engineering/assets/123651515/ca482b2e-9d96-487a-85cd-81e953953d32)
 
- 
 ## Самостоятельная работа №2
 ### Самостоятельно создайте атрибуты и методы для ранее созданного класса. Они должны отличаться, от тех, что указаны в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
 
@@ -84,6 +84,9 @@ person3.show_info()
 person3.celebrate_birthday()
 ```
 
+![image](https://github.com/WoodyDoodle/software_engineering/assets/123651515/2e3bb1f5-407a-4d1e-b519-1c772068b4bc)
+
+
 ## Самостоятельная работа №3
 ### Самостоятельно реализуйте наследование, продолжая работать с ранее созданным классом. Оно должно отличаться, от того, что указано в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
 
@@ -103,7 +106,6 @@ class Student(Person):
     def study(self):
         print(f"{self.name} учится на {self.course} курсе.")
 
-# Создание "объкетов"
 person1 = Person('Никита', 22)
 person1.greet()
 print("")
@@ -112,7 +114,7 @@ student1 = Student("Елизавета", 20, 3)
 student1.greet()
 student1.study()
 ```
-
+![image](https://github.com/WoodyDoodle/software_engineering/assets/123651515/05bea2eb-b87b-4158-b3d6-ec92de5c2c6b)
 
   
 ## Самостоятельная работа №4
@@ -122,17 +124,23 @@ student1.study()
 class Person:
     def __init__(self, name, age):
         self._name = name
-        self._age = age
+        self.__age = age
 
     def greet(self):
-        return f"Привет, меня зовут {self._name} и мне {self._age} лет."
+        return f"Привет, меня зовут {self._name} и мне {self.__age} лет."
 
 
 person1 = Person("Елизавета", 20)
 print(person1._name)
+try:
+    print(person1.__age)
+except AttributeError:
+    print('Неовзможно получить доступ к переменной')
+
 
 print(person1.greet())
 ```
+![image](https://github.com/WoodyDoodle/software_engineering/assets/123651515/e6011696-21fb-4b87-94bc-858055f2a938)
 
 
 ## Самостоятельная работа №5
@@ -171,9 +179,10 @@ person1.show_info()
 student1 = Student("Елизавета", 20, 3)
 student1.show_info()
 
-teacher1 = Teacher("Михаил Панов", 45, "Программная инженерия")
+teacher1 = Teacher("Мария", 45, "ИЗО")
 teacher1.show_info()
 ```
+![image](https://github.com/WoodyDoodle/software_engineering/assets/123651515/b730a564-5d89-458f-8409-9906ff6aae12)
 
 
 
