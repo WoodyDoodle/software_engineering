@@ -1,2 +1,3 @@
-a, b, c = 3, 4, 5
-print(a, b, c)
+s = 'Hello world'
+for i in range(len(s)-1,-1,-1):
+    print(s[i])
